@@ -26,8 +26,8 @@
             <div class="form-group">
                 <label class="col-sm-3">Description</label>
                 <div class="col-sm-9">
-                    <input type="text" name="description" autofocus="autofocus" placeholder="Enter Description Here.."
-                           class="form-control required">
+                    <textarea name="description" autofocus="autofocus" placeholder="Enter Description Here.."
+                              class="form-control required"></textarea>
                 </div>
             </div>
             <div class="form-group">

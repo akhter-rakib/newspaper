@@ -20,7 +20,7 @@
                 <label class="col-sm-3">News Category</label>
                 <div class="col-sm-9">
                     <select name="category" class="form-control">
-                        <option selected >
+                        <option selected>
                             Select a Category
                         </option>
                         <c:forEach items="${categoryList}" var="category">
@@ -38,8 +38,8 @@
             <div class="form-group">
                 <label class="col-sm-3">News Description</label>
                 <div class="col-sm-9">
-                    <input type="text" name="newsDetails" placeholder="Enter Description here."
-                           class="form-control required">
+                    <textarea name="newsDetails" placeholder="Enter Description here."
+                              class="form-control required"></textarea>
                 </div>
             </div>
             <div class="form-group">
