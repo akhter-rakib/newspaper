@@ -13,32 +13,30 @@
 </head>
 <body>
 <div class="container">
-    <div class="page-header">
-        <center><h1></h1></center>
-    </div>
+    <h1 class="well">Create Category</h1>
     <div class="col-lg-12 well">
-        <div class="row">
-            <form action="/createCategory" method="post" modelAttribute="category">
-                <div class="col-sm-12">
-                    <div class="row">
-                        <div class="col-sm-12 form-group">
-                            <label>Category Name</label>
-                            <input type="text" name="name" placeholder="Category plz.." class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12 form-group">
-                            <label>Description</label>
-                            <input type="text" name="description" placeholder="Description plz.."
-                                   class="form-control">
-                        </div>
-                    </div>
-                    <button type="submit" id="" class="btn btn-lg btn-info">Save</button>
+        <form action="/createCategory" method="post" modelAttribute="category" class="form-horizontal" role="form">
+            <div class="form-group">
+                <label class="col-sm-3">Category Name</label>
+                <div class="col-sm-9">
+                    <input type="text" name="name" autofocus="autofocus" placeholder="Enter Category Name Here.."
+                           class="form-control required">
                 </div>
-            </form>
-        </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3">Description</label>
+                <div class="col-sm-9">
+                    <input type="text" name="description" autofocus="autofocus" placeholder="Enter Description Here.."
+                           class="form-control required">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-3 col-sm-offset-9">
+                    <button type="submit" class="btn btn-primary btn-block">Save</button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
-
 </body>
 </html>

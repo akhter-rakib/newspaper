@@ -13,41 +13,41 @@
 </head>
 <body>
 <div class="container">
-    <div class="page-header">
-        <center><h1></h1></center>
-    </div>
+    <h1 class="well">Create News </h1>
     <div class="col-lg-12 well">
-        <div class="row">
-            <form action="/saveNews" method="post" modelAttribute="news">
-                <div class="col-sm-12">
-                    <div class="row">
-                        <div class="col-sm-12 form-group">
-                            <label>News Category</label>
-                            <select name="category">
-                                <c:forEach items="${categoryList}" var="category">
-                                    <option value="${category.categoryId}">${category.name}</option>
-                                </c:forEach>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12 form-group">
-                            <label>News Title</label>
-                            <input type="text" name="title" placeholder="Description plz.."
-                                   class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12 form-group">
-                            <label>Description</label>
-                            <input type="text" name="newsDetails" placeholder="Description plz.."
-                                   class="form-control">
-                        </div>
-                    </div>
-                    <button type="submit" id="" class="btn btn-lg btn-info">Save</button>
+        <form action="/saveNews" method="post" modelAttribute="news" class="form-horizontal" role="form">
+            <div class="form-group">
+                <label class="col-sm-3">News Category</label>
+                <div class="col-sm-9">
+                    <select name="category" class="form-control">
+                        <option selected >
+                            Select a Category
+                        </option>
+                        <c:forEach items="${categoryList}" var="category">
+                            <option value="${category.categoryId}">${category.name}</option>
+                        </c:forEach>
+                    </select>
                 </div>
-            </form>
-        </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3">News Title</label>
+                <div class="col-sm-9">
+                    <input type="text" name="title" placeholder="Enter Title here." class="form-control required">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3">News Description</label>
+                <div class="col-sm-9">
+                    <input type="text" name="newsDetails" placeholder="Enter Description here."
+                           class="form-control required">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-3 col-sm-offset-9">
+                    <button type="submit" class="btn btn-primary btn-block">Save</button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
 </body>
